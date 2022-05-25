@@ -15,5 +15,5 @@ body {
 	@apply bg-background font-sans text-foreground text-gray-800 antialiased;
 }
 img {
-	@apply w-full object-cover;
+	@apply h-full w-full object-cover;
 }
