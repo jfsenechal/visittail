@@ -60,3 +60,11 @@ $post-content-selector {
 figcaption {
 	@apply bg-gray-800 bg-opacity-60 p-4 text-white;
 }
+/* bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 */
+.bg-gradient-img {
+	background: linear-gradient(
+		90deg,
+		rgba(77, 77, 77, 0.35),
+		rgba(231, 218, 203, 0.35)
+	);
+}

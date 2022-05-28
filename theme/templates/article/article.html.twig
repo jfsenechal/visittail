@@ -1,6 +1,20 @@
 <main id="primary" class="border-2 border-pink-500">
 
 	{% include '@VisitTail/article/_imageTop.html.twig' %}
-	{% include '@VisitTail/article/_foot.html.twig' %}
+	{% include '@VisitTail/article/_cadre.html.twig' %}
 
+	<section class="min-h-screen container mx-auto grid grid-cols-[minmax(0,1fr),16rem]">
+		<div class="p-8">
+			<h1 class="font-bold text-3xl text-caractere">Un panorama impressionnant!</h2>
+		</div>
+		<sidebar class="p-8 bg-gray-200 border border-l-gray-300">
+			<h1 class="font-bold text-3xl">Heading 1</h1>
+			<ul>
+				<li>Link 1</li>
+				<li>Link 2</li>
+				<li>Link 3</li>
+			</ul>
+		</sidebar>
+	</section>
+	{% include '@VisitTail/article/_foot.html.twig' %}
 </main>

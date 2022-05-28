@@ -8,14 +8,13 @@
  *
  * @package visittail
  */
+use VisitMarche\Theme\Lib\Twig;
 
+$twig = Twig::LoadTwig();
+echo $twig->render('@VisitTail/_header.html.twig');
+
+wp_footer(); 
 ?>
-
-	<?php //get_template_part( 'template-parts/layout/footer', 'content' ); ?>
-
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
 
 </body>
 </html>

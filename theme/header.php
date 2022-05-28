@@ -8,7 +8,7 @@
  *
  * @package visittail
  */
-
+use VisitMarche\Theme\Lib\Twig;
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -20,8 +20,7 @@
 
 <body <?php body_class(); ?>>
 
-<?php wp_body_open(); ?>
+<?php wp_body_open();
 
-<div id="page" class="w-full mx-auto px-4 sm:px-6 lg:px-2">
-
-	<?php //get_template_part( 'template-parts/layout/header', 'content' ); ?>
+$twig = Twig::LoadTwig();
+echo $twig->render('@VisitTail/_header.html.twig');
