@@ -3,6 +3,7 @@
  * The line above injects the WordPress file header. It needs to be first,
  * before this comment.
  */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.2.0/css/fork-awesome.min.css");
 
 /**
  * This injects custom `@font-face` rules.

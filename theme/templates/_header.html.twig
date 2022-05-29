@@ -1,1 +1,25 @@
-<div id="page" class="w-full mx-auto">
+<header class="flex justify-start items-center w-full bg-pink-700 p-3">
+	<a href="#">
+		<img class="w-24" src="https://visitmarche.be/wp-content/themes/visitmarche/assets/tartine/rsc/img/img_logo.png" alt="logo">
+	</a>
+	<nav class="ml-auto">
+		<ul class="flex gap-2 list-none">
+			<li class="underline">
+				<a href="#">Accueil</a>
+			</li>
+			<li class="underline">
+				<a href="#">Inspirations</a>
+			</li>
+			<li class="underline">
+				<a href="#">Agenda</a>
+			</li>
+			<li class="underline">
+				<a href="#">S'organiser</a>
+			</li>
+			<li class="underline">
+				<a href="#">Pratique</a>
+			</li>
+		</ul>
+	</nav>
+	{% include '@VisitTail/header/_icones_sociaux.html.twig' %}
+</header>

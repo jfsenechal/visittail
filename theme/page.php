@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -14,13 +15,31 @@
 
 use Symfony\Component\ErrorHandler\Debug;
 use VisitMarche\Theme\Lib\Twig;
+use VisitMarche\Theme\Lib\WpRepository;
+use VisitMarche\Theme\Lib\PostUtils;
 
 get_header();
+$wpRepository = new WpRepository();
+$twig = Twig::LoadTwig();
+
 if (WP_DEBUG) {
 	Debug::enable();
 }
-$twig = Twig::LoadTwig();
-echo $twig->render('@VisitTail/article/article.html.twig');
+
+$post = get_post(1276);
+$image = PostUtils::getImage($post);
+$content = get_the_content(null, null, $post);
+$content = apply_filters('the_content', $content);
+$content = str_replace(']]>', ']]&gt;', $content);
+
+$recommandations = $wpRepository->getSamePosts($post->ID);
+
+echo $twig->render('@VisitTail/article/article.html.twig', [
+	'post' => $post,
+	'image' => $image,
+	'content' => $content,
+	'recommandations' => $recommandations
+]);
 
 //get_sidebar();
 get_footer();

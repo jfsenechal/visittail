@@ -68,3 +68,16 @@ figcaption {
 		rgba(231, 218, 203, 0.35)
 	);
 }
+
+.underline {
+	@apply bg-gradient-to-r from-pink-500
+	to-purple-500 bg-[length:0px_3px] bg-left-bottom
+	bg-no-repeat
+	transition-[background-size]
+	duration-500
+	hover:bg-[length:100%_3px];
+}
+
+.icon {
+	@apply mx-1 h-7 w-7 rounded-full bg-white text-black hover:bg-cta-light hover:text-white;
+}
