@@ -1,20 +1,18 @@
-<div id="page" class="w-full mx-auto">
-	<main id="primary" class="border-2 border-pink-500">
+<main id="primary" class="w-full mx-auto border-2 border-pink-500">
 
-		{% include '@VisitTail/article/_imageTop.html.twig' %}
-		{% include '@VisitTail/article/_cadre.html.twig' %}
+	{% include '@VisitTail/article/_imageTop.html.twig' %}
+	{% include '@VisitTail/article/_cadre.html.twig' %}
 
-		<section class="min-h-screen container mx-auto grid grid-cols-[minmax(0,1fr),auto]">
-			<div class="p-8">
-				<h1 class="font-bold text-3xl text-caractere">{{post.post_title}}</h1>
-				<div class="prose max-w-none font-lora ">
-					{{content|raw}}
-				</div>
+	<section class="min-h-screen container mx-auto grid grid-cols-[minmax(0,1fr),auto]">
+		<div class="p-8">
+			<h1 class="font-bold text-3xl text-caractere">{{ post.post_title }}</h1>
+			<div class="prose max-w-none font-lora ">
+				{{ content|raw }}
 			</div>
-			<sidebar class="p-8 border border-l-gray-300">
-				{% include '@VisitTail/article/_widgets.html.twig' %}
-			</sidebar>
-		</section>
-		{% include '@VisitTail/article/_foot.html.twig' %}
-	</main>
-</div>
+		</div>
+		<sidebar class="p-8 border border-l-gray-300">
+			{% include '@VisitTail/article/_widgets.html.twig' %}
+		</sidebar>
+	</section>
+	{% include '@VisitTail/article/_foot.html.twig' %}
+</main>
