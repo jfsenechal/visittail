@@ -1,9 +1,9 @@
-<header class="flex justify-start items-center w-full bg-pink-700 p-3">
+<header class="flex justify-start items-center w-full p-3">
 	<a href="#">
 		<img class="w-24" src="https://visitmarche.be/wp-content/themes/visitmarche/assets/tartine/rsc/img/img_logo.png" alt="logo">
 	</a>
 	<nav class="ml-auto">
-		<ul class="flex gap-2 list-none">
+		<ul class="flex gap-4 list-none text-white">
 			<li class="underline">
 				<a href="#">Accueil</a>
 			</li>
@@ -21,5 +21,6 @@
 			</li>
 		</ul>
 	</nav>
+	{% include '@VisitTail/header/_search.html.twig' %}
 	{% include '@VisitTail/header/_icones_sociaux.html.twig' %}
 </header>

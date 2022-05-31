@@ -57,7 +57,7 @@ $post-content-selector {
 	@apply max-w-none;
 }
 
-figcaption {
+figcaption, header {
 	@apply bg-gray-800 bg-opacity-60 p-4 text-white;
 }
 /* bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 */
