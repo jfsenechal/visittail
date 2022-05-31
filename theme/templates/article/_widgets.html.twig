@@ -1,11 +1,11 @@
 <h2 class="font-bold text-2xl text-caractere">Recommandations</h2>
 
 {% for recommandation in recommandations %}
-	<div class="m-8 max-w-sm flex items-center rounded-lg shadow-lg border-t border-r border-gray-400">
-		<div class="mr-4 basis-20 flex-shrink-0">
+	<div class="m-8 max-w-sm flex items-center rounded-lg shadow-lg border-gray-400">
+		<div class="mr-4 basis-28 flex-shrink-0">
 			<img class="rounded-lg h-max aspect-square" src="{{ recommandation.image }}" alt="img"/>
 		</div>
-		<div>
+		<div class="pl-2">
 			<h3 class="font-bold text-base">{{ recommandation.title }}</h3>
 			{% if recommandation.excerpt %}
 				<p class="mt-1">
