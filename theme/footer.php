@@ -11,9 +11,9 @@
 use VisitMarche\Theme\Lib\Twig;
 
 $twig = Twig::LoadTwig();
-echo $twig->render('@VisitTail/_header.html.twig');
+echo $twig->render('@VisitTail/_footer.html.twig');
 
-wp_footer(); 
+wp_footer();
 ?>
 
 </body>
