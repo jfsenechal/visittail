@@ -28,4 +28,4 @@ use VisitMarche\Theme\Lib\Twig;
 <?php wp_body_open();
 
 $twig = Twig::LoadTwig();
-echo $twig->render('@VisitTail/_header.html.twig');
+//echo $twig->render('@VisitTail/_header.html.twig');
