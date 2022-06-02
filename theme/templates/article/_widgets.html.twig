@@ -1,21 +1,26 @@
 <h2 class="font-bold text-2xl text-caractere">Recommandations</h2>
 
 {% for recommandation in recommandations %}
-	<div class="m-8 max-w-sm flex items-center rounded-lg shadow-lg border-gray-400">
+	<div class="m-8 max-w-sm flex items-center rounded-lg shadow-lg border-gray-400 group">
 		<div class="mr-4 basis-28 flex-shrink-0">
-			<img class="rounded-lg h-max aspect-square" src="{{ recommandation.image }}" alt="img"/>
+			<a href="#">
+				<img class="rounded-lg h-max aspect-square group-hover:opacity-75" src="{{ recommandation.image }}" alt="img"/>
+			</a>
 		</div>
 		<div class="pl-2">
-			<h3 class="font-bold text-base">{{ recommandation.title }}</h3>
-			{% if recommandation.excerpt %}
-				<p class="mt-1">
-					{{recommandation.excerpt|u.truncate(80,'...')}}
-				</p>
-			{% else %}
-				<p class="mt-1">
-					The secret to baking the best pizza at home lies in the preparation of the...
-				</p>
-			{% endif %}
+			<a href="#" class="fillPink">
+				<h3 class="font-bold text-base">{{ recommandation.title }}</h3>
+				{% if recommandation.excerpt %}
+					<p class="mt-1">
+						{{ recommandation.excerpt|u.truncate(80,'...') }}
+					</p>
+				{% else %}
+					<p class="mt-1">
+						The secret to baking the best pizza at home lies in the preparation of the...
+					</p>
+				{% endif %}
+			</a>
 		</div>
+
 	</div>
 {% endfor %}
