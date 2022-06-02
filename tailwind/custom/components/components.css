@@ -20,8 +20,7 @@
  * The `$post-title-selector` variable is replaced by PostCSS. Please see the
  * `postcss.config.js` file for details.
  */
-$
-post-title-selector {
+$post-title-selector {
 	@apply mx-auto mb-6 max-w-content text-3xl font-extrabold text-neutral-900;
 }
 
@@ -39,8 +38,7 @@ post-title-selector {
  *
  * https://tailwindcss.com/docs/typography-plugin
  */
-$
-post-content-selector {
+$post-content-selector {
 	@apply prose prose-neutral max-w-none prose-a:text-primary;
 }
 
@@ -73,6 +71,15 @@ figcaption, header {
 }
 
 .underlinePink {
+	@apply bg-gradient-to-r from-pink-500
+	to-purple-500 bg-[length:0px_3px] bg-left-bottom
+	bg-no-repeat
+	transition-[background-size]
+	duration-500
+	hover:bg-[length:100%_3px];
+}
+
+.underlineGrey {
 	@apply bg-gradient-to-r from-pink-500
 	to-purple-500 bg-[length:0px_3px] bg-left-bottom
 	bg-no-repeat

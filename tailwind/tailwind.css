@@ -27,7 +27,6 @@
  * JavaScript components or WordPress plugins.
  */
 @import "tailwindcss/components";
-@import-glob "./custom/components/**/!(components).css";
 @import "./custom/components/components.css";
 
 /**
