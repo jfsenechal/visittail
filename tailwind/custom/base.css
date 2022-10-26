@@ -11,12 +11,22 @@
  * `theme.json` file and is applied both to the frontend and in the block
  * editor.
 */
+
+/*
+Debug
+*/
+* {
+	border: 1px solid grey;
+}
+
 body {
 	@apply bg-background font-sans text-foreground text-gray-800 antialiased;
 }
+
 img {
 	@apply h-full w-full object-cover;
 }
-figcaption, header {
+
+figcaption {
 	@apply bg-gray-800 bg-opacity-60 p-4 text-white;
 }
